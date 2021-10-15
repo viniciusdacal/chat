@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Chat: React.FC = () => (
+const PagesChat: React.FC = () => (
   <div>
     <h1>Luke Chat</h1>
 
@@ -17,4 +17,4 @@ const Chat: React.FC = () => (
   </div>
 );
 
-export default Chat;
+export default PagesChat;

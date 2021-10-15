@@ -1,15 +1,12 @@
-import './App.css';
-
+import Chat from 'pages/chat';
+import Dashboard from 'pages/dashboard';
 import React from 'react';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
-
-import Chat from './Chat';
-import Dashboard from './Dashboard';
 
 const DASHBOARD_ROUTE = '/dashboard';
 const CHAT_ROUTE = '/chat/:userID';
 
-const App: React.FC = () => (
+const PagesRoot: React.FC = () => (
   <Router>
     <Switch>
       <Route path={DASHBOARD_ROUTE} component={Dashboard} />
@@ -19,4 +16,4 @@ const App: React.FC = () => (
   </Router>
 );
 
-export default App;
+export default PagesRoot;

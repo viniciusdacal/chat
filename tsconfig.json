@@ -2,6 +2,8 @@
   "compilerOptions": {
     "target": "es2017",
     "moduleResolution": "node",
+    "outDir": "./build",
+    "baseUrl": "./src",
     "module": "esnext",
     "declaration": false,
     "sourceMap": true,
@@ -26,13 +28,7 @@
     "listEmittedFiles": false,
     "listFiles": false,
     "pretty": true,
-    "lib": [
-      "es2019",
-      "dom",
-      "es2020.string"
-    ],
-    "outDir": "./build",
-    "baseUrl": ".",
+    "lib": ["es2019", "dom", "es2020.string"],
     "types": [],
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
@@ -41,12 +37,6 @@
     "noEmit": true
   },
   "compileOnSave": false,
-  "include": [
-    "src/**/*",
-    "test/**/*",
-    "config/**/*"
-  ],
-  "exclude": [
-    "node_modules/**"
-  ]
+  "include": ["src/**/*", "test/**/*", "config/**/*"],
+  "exclude": ["node_modules/**"]
 }
