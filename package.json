@@ -7,7 +7,9 @@
     "clean": "rimraf build",
     "start": "react-scripts start",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "react-scripts build",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -47,6 +49,8 @@
     "@voiceflow/tsconfig": "^1.0.0",
     "@zerollup/ts-transform-paths": "^1.7.18",
     "eslint": "^7.27.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
     "prettier": "^2.2.1",
     "prettier-stylelint": "^0.4.2",
     "ttypescript": "^1.5.12",
@@ -58,7 +62,6 @@
   "bugs": {
     "url": "https://github.com/voiceflow/frontend-project/issues"
   },
-  "homepage": "https://github.com/voiceflow/frontend-project/#readme",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -70,5 +73,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "lint-staged": {
+    "*.{ts,js}": "eslint --cache",
+    "*.{ts,js,css,md}": "prettier --write"
   }
 }
