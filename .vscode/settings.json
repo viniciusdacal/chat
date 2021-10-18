@@ -31,5 +31,6 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  }
+  },
+  "editor.wordWrapColumn": 150
 }

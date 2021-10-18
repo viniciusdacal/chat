@@ -1,20 +1,28 @@
+import Chat from 'components/Chat/Chat';
+import { selectUser } from 'components/User/reducer';
 import React from 'react';
+import { BsChevronLeft } from 'react-icons/bs';
+import { useSelector } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
+import * as UI from 'ui';
 
-const PagesChat: React.FC = () => (
-  <div>
-    <h1>Luke Chat</h1>
+import * as S from './chat.styles';
 
-    <dl>
-      <dt>Can I order some pizza</dt>
-      <dd>Sure what kind of pizza do you want?</dd>
+const PagesChat: React.FC = () => {
+  const { userId } = useParams<{ userId: string }>();
+  const user = useSelector(selectUser(userId));
 
-      <dt>Pepperoni and Cheese</dt>
-      <dd>Great, pepperoni and cheese coming up!</dd>
-    </dl>
-
-    <input placeholder="user input here" />
-    <button>send</button>
-  </div>
-);
+  return (
+    <UI.Container>
+      <S.Header>
+        <Link to="/dashboard">
+          <BsChevronLeft /> Back
+        </Link>{' '}
+        Hi {user?.name}
+      </S.Header>
+      {user ? <Chat userId={userId} /> : <S.NoUser>It's seems you tried to access a page that does not exit.</S.NoUser>}
+    </UI.Container>
+  );
+};
 
 export default PagesChat;

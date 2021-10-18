@@ -4,7 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 
 const DASHBOARD_ROUTE = '/dashboard';
-const CHAT_ROUTE = '/chat/:userID';
+const CHAT_ROUTE = '/chat/:userId';
 
 const PagesRoot: React.FC = () => (
   <Router>
