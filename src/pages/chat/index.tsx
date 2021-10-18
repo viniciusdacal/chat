@@ -20,7 +20,7 @@ const PagesChat: React.FC = () => {
         </Link>{' '}
         Hi {user?.name}
       </S.Header>
-      {user ? <Chat userId={userId} /> : <S.NoUser>It's seems you tried to access a page that does not exit.</S.NoUser>}
+      {user ? <Chat userId={userId} /> : <S.NoUser>It seems you tried to access a page that does not exit.</S.NoUser>}
     </UI.Container>
   );
 };
