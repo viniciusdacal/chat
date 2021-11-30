@@ -3,12 +3,12 @@ import { IoSend } from 'react-icons/io5';
 
 import * as S from './Input.styles';
 
-interface ChatInput {
+interface ChatInputProps {
   onSubmit: (message: string) => void;
 }
 
 // eslint-disable-next-line xss/no-mixed-html
-const ChatInput: React.FC<ChatInput> = ({ onSubmit }) => {
+const ChatInput: React.FC<ChatInputProps> = ({ onSubmit }) => {
   const [message, setMessage] = useState('');
 
   function handleSubmit(event: React.FormEvent) {

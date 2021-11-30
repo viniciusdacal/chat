@@ -10,7 +10,7 @@ import { RequestStatus } from 'utils/types';
 import { v4 as uuidv4 } from 'uuid';
 
 import * as S from './Chat.styles';
-import ChoiseMessage from './ChoiseMessage/Choise';
+import ChoiseMessage from './ChoiseMessage/ChoiseMessage';
 import ChatInput from './Input/Input';
 import { actions, selectChatStatus, selectMessages } from './reducer';
 import SpeakMessage from './SpeakMessage/SpeakMessage';

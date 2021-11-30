@@ -10,7 +10,7 @@ export interface ChatChoiseMessageProps {
   onClick: (button: AnyRequestButton) => void;
 }
 
-const ChatMessageChoise: React.FC<ChatChoiseMessageProps> = ({ payload, onClick }) => {
+const ChatChoiseMessage: React.FC<ChatChoiseMessageProps> = ({ payload, onClick }) => {
   return (
     <S.Container>
       {payload.buttons?.map((button) => (
@@ -22,4 +22,4 @@ const ChatMessageChoise: React.FC<ChatChoiseMessageProps> = ({ payload, onClick 
   );
 };
 
-export default ChatMessageChoise;
+export default ChatChoiseMessage;
